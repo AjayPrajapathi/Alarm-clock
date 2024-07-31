@@ -53,8 +53,12 @@
             
             const alarmTime = `${inputHour}:${inputMinute}:${inputSeconds} ${inputAmPm}`;
             alarms.add(alarmTime);
-    
-            // inputHour='';
+            // inputHour.value=0;
+            // console.log(inputHour.innerHTML)
+            document.getElementById("ihour").value = "";
+            document.getElementById("iminute").value = "";
+            document.getElementById("iseconds").value = "";
+            document.getElementById("iAmPm").selectedIndex = 0; 
             // Update the alarm list display
             updateAlarmList();
         });
@@ -79,3 +83,4 @@
                 alarmList.appendChild(listItem);
             });
         }
+       
