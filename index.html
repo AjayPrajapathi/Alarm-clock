@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" href="alarm-clock.png">
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +11,28 @@
 
 
 <body>
-   
+
     <div class="clock-frame">
+        <!-- Alarm-heading -->
         <h1 class="heading">ALARM-CLOCK</h1>
+        <!-- presend-time -->
         <h1 class="current-time"></h1>
         <div class="input-form">
+            <!--  -->
             <form id="myform">
-                
-                <input type="number" id="ihour"  min="1" max="12" placeholder="Hour" required>
+                <input type="number" id="ihour" min="1" max="12" placeholder="Hour" required>
                 <input type="number" id="iminute" min="0" max="59" placeholder="Min" required>
                 <input type="number" id="iseconds" min="0" max="59" placeholder="Sec" required>
                 <select id="iAmPm" required>
                     <option value="AM">AM</option>
                     <option value="PM">PM</option>
                 </select>
-
+                <!-- button for creating alarm -->
                 <button class="set-alarm-button" type="submit"><strong>Set Alarm</strong></button>
             </form>
         </div>
-       <ul id="alarm-list"></ul>
+        <!-- list of alarms -->
+        <ul id="alarm-list"></ul>
     </div>
     <script src="script.js">
 

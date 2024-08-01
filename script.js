@@ -1,6 +1,6 @@
   const alarms = new Set();
 
-        // Set the interval to call the render function every second
+        //  the interval to call the render function every second
         setInterval(render, 1000);
 
         function render() {
@@ -10,6 +10,7 @@
             const seconds = now.getSeconds();
 
             // formatted hour
+            // converting hour in 12 hour format
             const fh = hour > 12 ? hour % 12 : hour;
             const formattedHours = fh < 10 ? `0${fh}` : fh;
 
@@ -54,7 +55,7 @@
             const alarmTime = `${inputHour}:${inputMinute}:${inputSeconds} ${inputAmPm}`;
             alarms.add(alarmTime);
             // inputHour.value=0;
-            // console.log(inputHour.innerHTML)
+        
             document.getElementById("ihour").value = "";
             document.getElementById("iminute").value = "";
             document.getElementById("iseconds").value = "";
